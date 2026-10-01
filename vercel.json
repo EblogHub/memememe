@@ -1,0 +1,27 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npm run db:generate && npm run build",
+  "functions": {
+    "server.js": {
+      "maxDuration": 30
+    }
+  },
+  "rewrites": [
+    { "source": "/register", "destination": "/index.html" },
+    { "source": "/login", "destination": "/index.html" },
+    { "source": "/pending-verification", "destination": "/index.html" },
+    { "source": "/marketplace", "destination": "/index.html" },
+    { "source": "/products/:productId", "destination": "/index.html" },
+    { "source": "/admin", "destination": "/index.html" },
+    { "source": "/legal/:slug", "destination": "/index.html" },
+    { "source": "/community-guidelines", "destination": "/index.html" },
+    { "source": "/account-deletion", "destination": "/index.html" },
+    { "source": "/how-it-works", "destination": "/index.html" },
+    { "source": "/features", "destination": "/index.html" },
+    { "source": "/download", "destination": "/index.html" },
+    { "source": "/faqs", "destination": "/index.html" },
+    { "source": "/about", "destination": "/index.html" },
+    { "source": "/contact", "destination": "/index.html" },
+    { "source": "/blog", "destination": "/index.html" }
+  ]
+}
